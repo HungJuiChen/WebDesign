@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Henry’s Burgers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="pics/logo.png" alt="Henry’s Burgers’ logo" class = "logo-image">
+        </div>
+        <div class="login-container">
+            <a href="login.html">LOGIN</a>
+        </div>
+    </header>
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="menu.html">MENU</a>
+        <a href="about.html">ABOUT</a>
+        <a href="cart.html">CART</a>
+    </nav>
+
+    <main class="menu-content">
+        <aside>
+			<ul>
+				<li><a href="menu.html">Set Meal</a></li>
+				<li><a href="burgers.html">Burgers</a></li>
+				<li><a href="sides.html">Sides</a></li>
+				<li><a href="drinks.html">Drinks</a></li>
+			</ul>
+		</aside>
+
+
+        <section class = "menu">
+            <div class="menu-item" data-name="Cola" data-description="Refreshing cola to beat the heat" data-price="2.99">
+                <img src="pics/cola.jpg" alt="Menu Item Image" class="menu-image">
+				<!--img from: https://www.mosburger.com.sg/menu_category/drinks/ -->
+                <p>Cola</p>
+            </div>
+            <div class="menu-item" data-name="Fanta Grape" data-description="Lemon-lime flavored soft drink with a crisp, clean taste that gives you the ultimate cut-through refreshmen" data-price="2.99">
+                <img src="pics/fantagrape.jpg" alt="Menu Item Image" class="menu-image">
+				<!--img from: https://www.mosburger.com.sg/menu_category/drinks/ -->
+                <p>Sprite</p>
+            </div>
+            <div class="menu-item" data-name="Ice Lemon Tea" data-description="Ice-cold tea with lemons" data-price="2.99">
+                <img src="pics/icelemontea.jpg" alt="Menu Item Image" class="menu-image">
+				<!--img from: https://www.mosburger.com.sg/menu_category/drinks/ -->
+                <p>Ice Lemon Tea</p>
+            </div>
+            <div class="menu-item" data-name="Bottled Water" data-description="Nothing beats H2O" data-price="1.00">
+                <img src="pics/water.jpg" alt="Menu Item Image" class="menu-image">
+				<!--img from:https://www.mosburger.com.sg/menu_category/drinks/ -->
+                <p>Bottled Water</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content if any -->
+    </footer>
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+	  <div class="modal-content">
+		<span class="close">&times;</span>
+		<img id="modal-image" src="" alt="Menu Item Image">
+		<h2>Menu Item Name</h2>
+		<p>Description of the item...</p>
+		<p id=priceText>Price: $xx.xx</p>
+		<!-- Quantity Input Field -->
+		<div class="quantity-input">
+            <label for="item-quantity">Quantity:</label>
+            <input type="number" id="item-quantity" value="1" min="1">
+        </div>
+		<button class="add-to-cart">Add to Cart</button>
+	  </div>
+	</div>
+	<script>
+    <!--alert("JavaScript is working!"); //just to check if JS is being loaded -->
+</script>
+
+<script src="js/menu.js"></script>
+</body>
+</html>

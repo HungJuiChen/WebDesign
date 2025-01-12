@@ -1,0 +1,740 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+	height:auto;
+	background-color: #ffa64d;
+}
+
+body {
+	margin : 0;
+    font-family: Arial, sans-serif;
+    background-color: #eab676;
+	height: auto;
+	min-width: 1200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffa64d;
+}
+
+.logo-container {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.login-container, .user-name-container {
+    flex: 1;
+    text-align: right;
+}
+
+.login-container a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    background-color: #ffa64d;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.session-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* To align the items to the right */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #ffa64d;
+	font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #ffa64d;
+}
+
+.main-home {
+    padding: 20px;
+    text-align: center;
+	height: 100%;
+}
+
+
+.logo-image {
+    width: 500px;
+    height: auto;
+}
+
+.restaurant-image {
+    width: 80%;
+	height: 60%;
+    margin-top: 20px;
+}
+
+.main-about{
+	padding: 20px;
+	height: 100%;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: row; /* Items will be placed from left to right */
+    align-items: center; /* Vertically center align items */
+    gap: 20px; /* Space between items, adjust as needed */
+}
+
+.text-header {
+	text-align: center;
+	font-size: 1.5em;
+	flex: 1;
+    display: block; /* This is default, but added for clarity */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about-text {
+	text-align: justify;
+	font-size: 20px;
+    padding: 10px;
+}
+
+.about-image {
+	flex:2;
+	width: 200px;
+    height: 600px;
+    /*flex-shrink: 0; /* Prevents shrinking */
+	float: right;
+}
+
+.menu-content .menu-item {
+    text-align: center;  /* Centers the text horizontally */
+}
+
+.menu-content .menu-item .menu-image {
+    display: block;      /* Makes the image a block element */
+    margin-left: auto;   /* Centers the image if it doesn't take up full width */
+    margin-right: auto;
+}
+
+
+/* Styles for each menu item */
+.menu-item {
+    width: calc(33.33% - 10px); /* Gives a little space between items */
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+	margin-top: 20px;
+	font-size: 1.5em;
+}
+
+/* Styles for each menu item's image */
+.menu-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	border: 2px solid black;
+	width: 100%;
+    height: 70%;
+	border-radius: 20px;
+    object-fit: cover;  /* This ensures the image covers the area without distortion */
+}
+
+
+/* Ensure main content uses flexbox to place aside and section side by side */
+.menu-content {
+    display: flex;
+	flex-direction: row;
+	background-color: #E4AB7C;
+}
+
+/* Style for the menu items section */
+.menu {
+    flex: 6; /* take up 3 fractions of the available space, this can be adjusted based on your design requirements */
+    display: flex;
+    flex-wrap: wrap; /* Allows menu items to wrap to the next line if they don't fit */
+    justify-content: space-between; /* Optional: Adds some space between items, remove if not required */
+}
+
+/* Style for the aside (left-side menu) */
+aside {
+    flex: 1; /* take up 1 fraction of the available space, this can be adjusted based on your design requirements */
+    margin-right: 20px; /* Optional: Adds some space between the aside and the menu items */
+    background-color: #FFFDEE;
+    flex-grow: 1;   /* Allow the <aside> to grow and take available space */
+    flex-shrink: 0; /* Prevent the <aside> from shrinking smaller than its content */
+    display: grid;
+	align-content: start; 
+	place-items: center;
+	text-align: center;
+}
+
+aside ul li {
+    margin-bottom: 20px; /* Adjust value as needed */
+	margin-top:20px;
+}
+
+/* Target the <ul> within the <aside> */
+aside ul {
+    list-style-type: none;  /* Removes the bullet points */
+    padding: 0;             /* Removes default padding */
+    margin: 10px;              
+}
+
+/* Style each list item and the links within them */
+aside li {
+    margin-bottom: 10px;    /* Adds some space between items */
+}
+
+aside li a {
+    font-size: 1.5em;       /* Increases the font size to make it bigger */
+    text-decoration: none;  /* Removes the underline from the links */
+    color: inherit;         /* Uses the same color as the surrounding text */
+}
+
+aside li a:hover {
+    color: #007BFF;         /* Changes the color when you hover over the link. Adjust the color value as needed. */
+}
+
+aside li .active {
+    color: #ff0000; /* Red text for the active link */
+    font-weight: bold; /* Bold text for the active link */
+    /* Additional styles as required */
+}
+
+/*toast message*/
+.toast {
+    visibility: hidden;
+    max-width: 50%;
+    margin-left: 0px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transition: visibility 0.5s, opacity 0.5s linear;
+    opacity: 0;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*cart table*/
+.cart-table {
+	width: 75%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+.cart-table th, td {
+	border: 1px solid #ddd;
+	padding: 8px 12px;
+	text-align: center;
+}
+
+.product-desc {
+	display: flex;
+	align-items: center;
+	text-align: left;			  
+}
+
+.cart-table th:nth-of-type(4) {
+	border:none;
+}
+
+.cart-table td:nth-of-type(4) {
+	border:none;
+}
+
+.remove-button {
+	padding:10px;
+	border-radius:5px;
+	color: #fff;
+	border: 1px solid #000;
+	font-size: 1em;
+	
+	background-color: orange;
+}
+
+.product-image {
+	width: 250px;
+	height: 200px;
+	margin-right: 70px;
+}
+
+.main-cart, .orderhistory-cart{
+    display: flex;
+    flex-direction: column;
+	height: 100%;
+	background-color: #E4AB7C;
+	padding-bottom: 10px;
+	align-items: center;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.menu h2 {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.cart-item img {
+    flex-basis: 33%;
+    max-width: 100%;
+    height: auto;
+}
+
+.item-text, .item-quantity, .item-price {
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.checkout-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: orange;
+    cursor: pointer;
+    color: white;
+	border: 1px solid black;
+	align-self: flex-end;
+}
+
+.login-page, .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E4AB7C;
+    padding: 20px;
+}
+
+.profile-container {
+	height: 550px;
+}
+
+.login-page {
+	height: 650px;
+}
+
+.login-page h2 {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.login-page label {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.login-page input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+	margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button, .home-button , .order-history-button{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+	margin: 10px 10px;
+	font-size: 20px;
+}
+
+.home-button, .order-history-button {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	
+}
+
+input[readonly] {
+    background-color: transparent; /* make the background transparent */
+    border: none;                  /* remove the border */
+    outline: none;                /* remove the focus outline */
+    cursor: default;              /* set the cursor to default to indicate it's not editable */
+}				 																						
+.sign-in {
+    margin-top: 20px;
+}
+
+/* Registration Form Styles */
+.registration-form {
+    max-width: 500px; /* Adjust this as needed */
+    margin: 50px auto; /* Center the form */
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #F5F5DC;
+}
+
+.registration-form h2 {
+    text-align: center;
+    background-color: orange;
+    padding: 10px 0;
+    border: 1px solid black;
+	width: 50%;  /* Adjust this to your desired width */
+    margin: 0 auto;  /* This will center the bar */
+}
+
+.registration-form label {
+    display: block;
+    margin: 20px 10px 10px;
+}
+
+.registration-form input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #000;
+	margin: 20px 10px 10px;
+	display: flex;
+    justify-content: center;  /* Horizontally centers the contents */
+}
+
+.error-text {
+    color: red;
+    font-size: 0.8em;
+	margin: 10px 0px;
+}
+
+
+//Modal CSS
+/* Modal Base Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  top: 50%; 
+  left: 50%;
+  width: 50%; /* Or whatever width you prefer */
+  height: auto; 
+  z-index: 10000; /* Higher z-index than other styles */
+  transform: translate(-50%, -50%); /* Center the modal */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Vertically centers children */
+  align-items: center; /* Horizontally centers children */
+}
+.modal-content h2 {
+    font-size: 30px;  /* Adjust this value as needed */
+}
+.modal-content p {
+    font-size: 30px;  /* Adjust this value as needed */
+}
+#priceText {
+    font-size: 32px;  /* Adjust this value as needed */
+	font-weight: bold;
+}
+
+/* Buttons */
+.close, .add-to-cart {
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+}
+
+.close {
+  background-color: red;
+  top: 10px;
+  right: 10px;
+}
+
+.add-to-cart {
+  background-color: green;
+  bottom: 20px;
+  right: 20px;
+  margin-top: auto;
+}
+#myModal {
+    display: none;        /* Hidden by default */
+    position: fixed;      
+    z-index: 10000;       /* Higher z-index than other styles */
+    top: 50%;             
+    left: 50%;            
+    width: 50%;           /* Or whatever width you prefer */
+    transform: translate(-50%, -50%); /* Center the modal */
+}
+#modal-image {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+.notification {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    color: #333;
+}
+
+.quantity-input {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spacing between label and input */
+	font-size: 1.5em;
+}
+
+.quantity-input input {
+    width: 45px; /* adjust width as needed */
+	text-align: center;
+	font-size: 1em;
+}											 
+
+.profile-form {
+    width: 700px;
+    height: 400px;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-group { /* This is our new class for each row */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-form label {
+    flex: 0 0 150px; /* Adjust the 150px to set width of the label */
+    text-align: right;
+    padding-right: 30px;
+}
+
+.profile-form input {
+    flex: 1; /* This makes input take the remaining space */
+    padding: 10px 10px 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    width: 600px; /* Setting a fixed width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+	overflow: visible;
+}
+
+.error-text {
+    margin-left: 10px;
+    color: red;
+}
+
+.orderhistory-table, .modify-table, .report-table {
+	width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.orderhistory-cart {
+	background-color: transparent;
+}
+
+/*------------------Slideshow------------------*/
+/* Slideshow container */
+.slideshow-container {
+	position: relative;
+	margin: auto;
+}
+
+/* Set the size of the slideshow container */
+.slideshow-container {
+	width: 400px; /* You can set this to whatever width you prefer */
+	height: 100%; /* Set a height for your container */
+	position: relative; /* Used for positioning the navigation arrows */
+	margin: auto; /* This will center your slideshow on the page */
+}
+
+/* Make the images fill the container without stretching */
+.slideshow-container img {
+	width: 100%; /* This makes the image fill the width of the container */
+	height: auto; /* This maintains the aspect ratio */
+	object-fit: cover; /* This makes sure that the image covers the area, cropping if necessary */
+	border-radius: 5px;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 55%; /* Center vertically */
+	transform: translateY(-50%); /* Align the center of the button with the center of the container */
+	width: auto;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	background-color: rgba(0,0,0,0.5); /* Add some transparency for aesthetics */
+}
+
+.numbertext {
+	margin: 10px 0px;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+	left: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+/*------------------End of Slideshow------------------*/
+.modify-table ,.report-table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.modify-price, .sales-report {
+	text-align: center;
+	width: 50%;
+	
+}
+
+.modify-price{
+	margin-bottom: 30px;
+}
+
+footer {
+  background-color: #333; /* Dark background */
+  color: white; /* Text color */
+  padding: 20px 0; /* Some padding */
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around; /* Distribute space between sections */
+  max-width: 1200px; /* Max width of the footer */
+  margin: 0 auto; /* Center the footer */
+  text-align: left;
+}
+
+.footer-section h4 {
+  margin-bottom: 15px; /* Space below the section titles */
+}
+
+.footer-section ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.footer-section ul li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack the sections on small screens */
+    align-items: center; /* Center the items */
+  }
+}
+
+.footer-section ul li a {
+  color: white; /* Anchor text color */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth color transition for hover effect */
+}
+
+.footer-section ul li a:hover {
+  color: #007BFF; /* Lighter color on hover */
+}
