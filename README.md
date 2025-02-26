@@ -1,4 +1,4 @@
-# Henry’s Burgers - Web Design Project Report
+# Henry’s Burgers - Web Design Project
 
 ## 📌 Project Overview
 This repository contains the project report for **Henry’s Burgers**, a web design project developed as part of **IE4717 Web Application Design**. The project focuses on creating an intuitive and efficient **online food ordering system** that enhances the user experience through streamlined navigation and management features.
