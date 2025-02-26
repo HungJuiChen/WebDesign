@@ -1,9 +1,9 @@
 # Henry’s Burgers - Web Design Project
 
-## 📌 Project Overview
+## Project Overview
 This repository contains the project report for **Henry’s Burgers**, a web design project developed as part of **IE4717 Web Application Design**. The project focuses on creating an intuitive and efficient **online food ordering system** that enhances the user experience through streamlined navigation and management features.
 
-## 📄 About the Report
+## About the Report
 The report provides a **comprehensive documentation** of the web design project, detailing the requirements, design process, implementation, and testing methodologies used. It covers:
 
 - **Application Requirements and Specifications** – Defines the key features required for both users and administrators.
@@ -21,23 +21,23 @@ The report provides a **comprehensive documentation** of the web design project,
   - Contribution of each team member
   - Source code reference
 
-## 🌟 Key Features
+## Key Features
 - **User-Friendly Interface**: Seamless navigation for browsing menu items, adding to cart, and placing orders.
 - **User Accounts**: Allows registration, login, and order history tracking.
 - **Cart System**: Real-time updates, quantity adjustments, and order confirmation.
 - **Admin Dashboard**: Modify menu prices and generate sales reports.
 
-## 🏗️ Technologies Used
+## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: PHP
 - **Database**: MySQL
 
-## 📌 How to Use the Report
+## How to Use the Report
 1. **Download the report** or view it in the repository.
 2. **Refer to the structured sections** to understand the project lifecycle from concept to execution.
 3. **Use the insights** for developing similar web-based ordering systems.
 
-## 🎯 Authors & Contributors
+## Authors & Contributors
 - **CHEN HUNG-JUI** – Designed and implemented major UI components, menu, and admin features.
 - **MUHAMMAD AMEERUL BIN AZMAN** – Handled user authentication, profile management, and backend integration.
 
